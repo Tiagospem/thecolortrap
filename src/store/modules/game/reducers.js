@@ -7,18 +7,18 @@ const INITIAL_STATE = {
     playing: false,
     speed: 1000,
   },
-  gameData: {},
+  gameState: {},
 };
 
 export default function auth(state = INITIAL_STATE, action) {
   return produce(state, draft => {
     switch (action.type) {
-      case '@auth/START_GAME': {
-        draft.gameData = action.payload.defaults;
+      case '@game/START_GAME': {
+        draft.gameState = action.payload.defaults;
         break;
       }
-      case '@user/END_GAME': {
-        draft.gameData = {};
+      case '@game/END_GAME': {
+        draft.gameState = {};
         break;
       }
       default:

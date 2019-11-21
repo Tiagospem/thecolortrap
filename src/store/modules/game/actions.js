@@ -1,6 +1,6 @@
 export function startGame(defaults) {
   return {
-    type: '@main/START_GAME',
+    type: '@game/START_GAME',
     payload: {defaults},
   };
 }

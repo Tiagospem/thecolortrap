@@ -6,6 +6,7 @@ import {startGame} from '~/store/modules/game/actions';
 
 export default function Start() {
   const dispatch = useDispatch();
+
   const defaults = useSelector(state => state.game.defaults);
 
   function handleStartGame() {
@@ -21,7 +22,7 @@ export default function Start() {
   return (
     <StartView>
       <StartButton>
-        <ButtonText onPress={() => handleStartGame}>Start Game</ButtonText>
+        <ButtonText onPress={() => handleStartGame()}>Start Game</ButtonText>
       </StartButton>
     </StartView>
   );
